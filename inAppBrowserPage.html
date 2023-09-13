@@ -1,0 +1,46 @@
+<?php
+// Set the X-Frame-Options header to allow iframe embedding from specific domains header('X-Frame-Options: ALLOW-FROM https://yourdomain.com'); // Replace with your own domain
+
+// Other PHP code and HTML content for your webpage
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InAppBrowserPage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #2196F3;
+        }
+
+        #webview {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress"></div>
+    <iframe id="webview" src="https://drive.google.com/drive/folders/1yGXSnCjddxFQboCLCTiHAOhIPDVEZeni?usp=sharing"
+        frameborder="0"></iframe>
+    <script src="script.js"></script>
+</body>
+
+</html>
